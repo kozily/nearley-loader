@@ -9,7 +9,7 @@ parser rules directly from webpack.
 
 Just configure webpack to handle nearley files with this loader:
 
-```
+```javascript
 module: {
   loaders: [
     { test: /\.ne$/, loader: 'nearley' }
@@ -20,7 +20,7 @@ module: {
 Once you've done that, you can now require nearley files in your javascript
 modules and you'll get the compiled parser rules:
 
-```
+```javascript
 import { Parser } from 'nearley';
 import Grammar from './grammar.ne';
 
