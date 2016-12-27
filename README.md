@@ -17,14 +17,15 @@ module: {
 }
 ```
 
-Once you've done that, you can now require nearley files in your javascript
-modules and you'll get the compiled parser rules:
-
 If using with `create-react-app` or any other pre-configured webpack, be sure 
 that the `.ne` extension (or whatever file extension you use above) is not 
 affected by another loader.  For instance, `create-react-app` will apply a 
 url-loader to any file extension it doesn't 
 recognize.
+
+
+Once you've done that, you can now require nearley files in your javascript
+modules and you'll get the compiled parser rules:
 
 ```javascript
 import { Parser } from 'nearley';
