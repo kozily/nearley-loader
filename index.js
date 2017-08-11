@@ -7,7 +7,7 @@ module.exports = function(input) {
   var parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
   parser.feed(input);
 
-  var compilation = compile(parser.results[0], {});
+  var compilation = compile(parser.results[0], { file: this.resourcePath });
   return generate(compilation, 'Grammar');
 }
 
