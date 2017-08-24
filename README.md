@@ -12,7 +12,7 @@ Just configure webpack to handle nearley files with this loader:
 ```javascript
 module: {
   loaders: [
-    { test: /\.ne$/, loader: 'nearley' }
+    { test: /\.ne$/, loader: 'nearley-loader' }
   ]
 }
 ```
