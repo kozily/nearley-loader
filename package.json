@@ -1,8 +1,8 @@
 {
   "name": "nearley-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Nearley parser rules loader for webpack",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kozily/nearley-loader.git"
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kozily/nearley-loader/issues"
   },
-  "homepage": "https://github.com/kozily/nearley-loader#readme"
+  "homepage": "https://github.com/kozily/nearley-loader#readme",
+  "peerDependencies": {
+    "nearley": "^2.11.0"
+  }
 }

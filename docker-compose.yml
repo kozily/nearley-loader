@@ -1,0 +1,13 @@
+version: '2'
+services:
+  npm:
+    image: kozily/nearley-loader
+    build: .
+    entrypoint: npm
+    command: start
+    tty: true
+    volumes:
+      # Source code
+      - "./src:/opt/project/src"
+      # Package config
+      - "./package.json:/opt/project/package.json"

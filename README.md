@@ -1,7 +1,7 @@
 # nearley-loader
 
 This package is a standard [webpack
-loader](https://webpack.github.io/docs/loaders.html) which allows you to load
+loader](https://webpack.js.org/loaders/) which allows you to load
 [nearley](https://github.com/Hardmath123/nearley) parser specification files as
 parser rules directly from webpack.
 
@@ -11,27 +11,25 @@ Just configure webpack to handle nearley files with this loader:
 
 ```javascript
 module: {
-  loaders: [
+  rules: [
     { test: /\.ne$/, loader: 'nearley' }
   ]
 }
 ```
 
-If using with `create-react-app` or any other pre-configured webpack, be sure 
-that the `.ne` extension (or whatever file extension you use above) is not 
-affected by another loader.  For instance, `create-react-app` will apply a 
-url-loader to any file extension it doesn't 
-recognize.
-
+If using with `create-react-app` or any other pre-configured webpack, be sure
+that the `.ne` extension (or whatever file extension you use above) is not
+affected by another loader.  For instance, `create-react-app` will apply a
+url-loader to any file extension it doesn't recognize.
 
 Once you've done that, you can now require nearley files in your javascript
 modules and you'll get the compiled parser rules:
 
 ```javascript
-import { Parser } from 'nearley';
-import Grammar from './grammar.ne';
+import { Parser, Grammar } from 'nearley';
+import grammar from './grammar.ne';
 
-let parser = new Parser(Grammar.ParserRules, Grammar.ParserStart);
+const parser = new Parser(Grammar.fromCompiled(grammar));
 ```
 
 ## License
