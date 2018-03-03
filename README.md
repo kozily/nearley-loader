@@ -1,9 +1,8 @@
 # nearley-loader
 
-This package is a standard [webpack
-loader](https://webpack.js.org/loaders/) which allows you to load
-[nearley](https://github.com/Hardmath123/nearley) parser specification files as
-parser rules directly from webpack.
+This package is a standard [webpack loader](https://webpack.js.org/loaders/)
+which allows you to load [nearley](https://github.com/Hardmath123/nearley)
+parser specification files as parser rules directly from webpack.
 
 ## Usage
 
@@ -12,9 +11,15 @@ Just configure webpack to handle nearley files with this loader:
 ```javascript
 module: {
   rules: [
-    { test: /\.ne$/, loader: 'nearley' }
+      {
+        test: /\.nearley$/,
+        use: [
+          'nearley-loader',
+        ],
+      },
   ]
 }
+
 ```
 
 If using with `create-react-app` or any other pre-configured webpack, be sure
