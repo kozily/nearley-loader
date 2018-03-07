@@ -1,6 +1,6 @@
 {
   "name": "nearley-loader",
-  "version": "0.0.3",
+  "version": "2.0.0",
   "description": "Nearley parser rules loader for webpack",
   "main": "src/index.js",
   "repository": {
