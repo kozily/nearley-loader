@@ -9,7 +9,7 @@ var nearleyGrammar = nearley.Grammar.fromCompiled(rawGrammar);
 module.exports = function(input) {
   var parser = new nearley.Parser(nearleyGrammar);
   parser.feed(input);
-  var compilation = compile(parser.results[0], {});
+  var compilation = compile(parser.results[0], {file: this.resourcePath});
   lint(compilation, {});
   return generate(compilation, 'grammar');
 }
