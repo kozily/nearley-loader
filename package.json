@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/kozily/nearley-loader#readme",
   "peerDependencies": {
-    "nearley": "^2.11.0"
+    "nearley": "^2.0.0"
   }
 }

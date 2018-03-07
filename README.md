@@ -4,6 +4,17 @@ This package is a standard [webpack loader](https://webpack.js.org/loaders/)
 which allows you to load [nearley](https://github.com/Hardmath123/nearley)
 parser specification files as parser rules directly from webpack.
 
+This branch contains support for the latest nearley version, currently
+`nearley@^2.0.0`. For `nearlet@^1.0.0` check the `nearley1` branch in this
+repo.
+
+## Installation
+
+You need to install both `nearley` and `nearley-loader`, since `nearley` is a
+peer dependency of this package. The major version of the `nearley-loader`
+package must match the installed version of `nearley`, so if you install
+`nearley@2.13.0`, then you need to install `nearley-loader@^2.0.0`.
+
 ## Usage
 
 Just configure webpack to handle nearley files with this loader:
