@@ -5,6 +5,8 @@ loader](https://webpack.github.io/docs/loaders.html) which allows you to load
 [nearley](https://github.com/Hardmath123/nearley) parser specification files as
 parser rules directly from webpack.
 
+This branch supports `nearley@^1`.
+
 ## Usage
 
 Just configure webpack to handle nearley files with this loader:

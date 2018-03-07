@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kozily/nearley-loader/issues"
   },
-  "homepage": "https://github.com/kozily/nearley-loader#readme"
+  "homepage": "https://github.com/kozily/nearley-loader#readme",
+  "peerDependencies": {
+    "nearley": "^1.0.0"
+  }
 }
